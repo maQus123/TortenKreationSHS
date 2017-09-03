@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="description" content="@ViewData["MetaDescription"]" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/styles.css" asp-append-version="true">
+</head>
+<body>
+    <nav class="pink lighten-3" role="navigation">
+        <div class="nav-wrapper container">
+            <a asp-route="default" class="brand-logo white-text thin">TortenKreation</a>
+            <a href="#" data-activates="torten-kreation-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a asp-route="default" class="white-text">Home</a></li>
+                <li><a asp-route="cakeList" class="white-text">Tortengalerie</a></li>
+                <li><a asp-route="aboutMe" class="white-text">Über mich</a></li>
+            </ul>
+            <ul class="side-nav" id="torten-kreation-nav">
+                <li>
+                    <div class="userView">
+                        <div class="background">
+                            <img src="~/img/banner/torte-1-mobile.jpg">
+                        </div>
+                        <img class="circle" src="~/img/portrait-small.jpg" alt="Portrait Melissa TortenKreation">
+                        <span class="grey-text text-darken-3 bold">Torten Kreation SHS</span>
+                        <span class="grey-text"></span>
+                    </div>
+                </li>
+                <li><a asp-route="default" class="grey-text text-darken-1 waves-effect">Home</a></li>
+                <li><a asp-route="cakeList" class="grey-text text-darken-1 waves-effect">Tortengalerie</a></li>
+                <li><a asp-route="aboutMe" class="grey-text text-darken-1 waves-effect">Über mich</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+    <footer class="page-footer pink lighten-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Torten Kreation SHS</h5>
+                    <p class="grey-text text-lighten-4">Individuelle Tortengestaltung aus Schloß Holte-Stukenbrock.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" asp-route="default">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" asp-route="cakeList">Tortengalerie</a></li>
+                        <li><a class="grey-text text-lighten-3" asp-route="aboutMe">Über mich</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Copyright Torten Kreation SHS
+                <a class="btn-floating btn-flat waves-effect waves-light right" href="#" title="Zum Anfang"><i class="material-icons">keyboard_arrow_up</i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="~/script.js" asp-append-version="true"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home - TortenKreation SHS";
+    ViewData["MetaDescription"] = "Individuelle Tortengestaltung aus Schloß Holte-Stukenbrock von mir, Melissa.";
+    int rnd = new Random().Next(1, 3);
+}
+<div class="container">
+    <br /><br />
+    <h1 class="header center pink-text text-lighten-3 bold">Torten Kreation SHS</h1>
+    <div class="row center">
+        <h5 class="header col s12 light grey-text text-darken-1">Individuelle Tortengestaltung aus Schloß Holte-Stukenbrock</h5>
+    </div>
+    <div class="row center">
+        <a asp-route="cakeList" class="btn-large waves-effect waves-light pink lighten-2">Entdecken</a>
+    </div>
+    <br /><br />
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-image">
+                    <img class="responsive-img" src="img/banner/torte-@(rnd).jpg" srcset="img/banner/torte-@(rnd)-mobile.jpg 320w, img/banner/torte-@(rnd).jpg 1280w" sizes="50vw" alt="Torte TortenKreation">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br /><br />
+</div>
