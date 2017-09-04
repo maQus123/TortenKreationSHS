@@ -12,6 +12,8 @@
 
         public DbSet<Image> Images { get; set; }
 
+        public DbSet<Visit> Visits { get; set; }
+
     }
 
 }
