@@ -11,9 +11,10 @@ using TortenKreationSHS;
 namespace TortenKreationSHS.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class CakeContextModelSnapshot : ModelSnapshot
+    [Migration("20170904212314_VisitSiteField")]
+    partial class VisitSiteField
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

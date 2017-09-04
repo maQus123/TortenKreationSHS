@@ -23,6 +23,7 @@
             services.AddMvc();
             services.Configure<RouteOptions>(options => { options.AppendTrailingSlash = true; options.LowercaseUrls = true; });
             services.AddScoped<ICakeRepository, CakeRepository>();
+            services.AddScoped<IVisitRepository, VisitRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {

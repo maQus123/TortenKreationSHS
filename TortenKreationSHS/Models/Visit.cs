@@ -8,18 +8,16 @@
             this.VisitedAt = new DateTimeOffset(DateTime.UtcNow);
         }
 
-        public int Id { get; set; }
+        public int Id { get; private set; }
 
         public DateTimeOffset VisitedAt { get; private set; }
 
-        public string Country { get; set; }
+        public string UserAgent { get; set; }
 
-        public string City { get; set; }
+        public string Ip { get; set; }
 
-        public string Browser { get; set; }
-
-        public string OS { get; set; }
-
+        public string VisitedSite { get; set; }
+        
     }
 
 }

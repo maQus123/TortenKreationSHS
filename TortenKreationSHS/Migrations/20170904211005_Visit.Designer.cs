@@ -11,9 +11,10 @@ using TortenKreationSHS;
 namespace TortenKreationSHS.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class CakeContextModelSnapshot : ModelSnapshot
+    [Migration("20170904211005_Visit")]
+    partial class Visit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,8 +64,6 @@ namespace TortenKreationSHS.Migrations
                     b.Property<string>("UserAgent");
 
                     b.Property<DateTimeOffset>("VisitedAt");
-
-                    b.Property<string>("VisitedSite");
 
                     b.HasKey("Id");
 
