@@ -2,6 +2,7 @@
 
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.HttpOverrides;
     using Microsoft.AspNetCore.Routing;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
@@ -37,6 +38,9 @@
                 OnPrepareResponse = ctx => {
                     ctx.Context.Response.Headers[HeaderNames.CacheControl] = "public,max-age=" + 604800;
                 }
+            });
+            app.UseForwardedHeaders(new ForwardedHeadersOptions {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
             app.UseMvc(routes => {
                 routes.MapRoute(
